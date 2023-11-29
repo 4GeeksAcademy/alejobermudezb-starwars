@@ -1,3 +1,133 @@
-/* 
-    General Styles
-*/
+.bg {
+    background-color: rgb(5, 5, 5);
+      }
+    
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        perspective: 1000px; 
+        display: flex;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        border-radius: 10px;
+      }
+      
+      .flip-card-back {
+        background-color: rgba(35, 38, 41, 0.534);
+        color: white;
+        border-radius: 10px;
+        transform: rotateY(180deg);
+      }
+    .titulo-card, .first-desc, .second-desc{
+        margin-top: 20px;
+        color: rgb(255, 251, 0);
+    }
+    
+    .like
+    {
+        color: rgb(255, 251, 0);
+        cursor: pointer;
+        transition: 0.2s;
+    
+    }
+    .like:hover{
+      color: #FF0000;
+    }
+    
+    .like:active{
+      transform: scale(0.9);
+    }
+    
+    .titulo-carrusel{
+        font-family: 'Star Wars';
+        color: rgb(255, 251, 0);                                            
+    }
+    .titulo-info{
+        font-family: 'Revalia', cursive;
+        font-size: 15px;
+        color: rgb(255, 251, 0);   
+    }
+    .arrow-r{
+        cursor:pointer;
+        color: yellow;
+        font-family: 'Star Wars';
+        transition: 0.2s;
+    }
+    
+    .arrow-r:active{
+      transform: scale(0.9);
+    }
+    
+    .arrow-l{
+      color: yellow;
+      font-family: 'Star Wars';
+    }
+    
+    .arrow-l:active{
+      transform: scale(0.9);
+    }
+    
+    
+    #heart-fav-list{
+      color: yellow;
+      transition: 0.2s;
+    }
+    
+    #heart-fav-list:active{
+      transform: scale(0.9);
+    }
+    
+    .arrow-back{  
+      color: yellow;
+      transition: 0.2s;
+    }
+    
+    .arrow-back:active{
+    transform: scale(0.9);
+    }
+    
+    .arrow:hover{
+        color:wheat;
+    }
+
+    .delete{
+      color:gray;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    
+    .delete:hover{
+      color:whitesmoke;
+    }
+    
+    .delete:active{
+    transform: scale(0.9);
+    }

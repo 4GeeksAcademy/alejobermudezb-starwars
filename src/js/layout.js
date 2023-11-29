@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+
+import { Navbar } from './component/Navbar.jsx'
+import { Home } from "./component/Home.jsx";
+import { Footer } from './component/Footer.jsx'
+import { VehiculoInfo } from "./component/VehiculosInfo.jsx";
+import { PlanetaInfo } from "./component/PlanetasInfo.jsx";
+import { PersonajeInfo } from "./component/PersonajesInfo.jsx";
 import injectContext from "./store/appContext";
-
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 
 //create your first component
 const Layout = () => {
@@ -17,18 +17,19 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="bg">
 			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Navbar />
+			<Navbar></Navbar>
 					<Routes>
+					
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/vehiculo/:id" element={<VehiculoInfo />} />
+						<Route path="/planets/:id" element={<PlanetaInfo />} />
+						<Route path="/people/:id" element={<PersonajeInfo />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
+						
 					</Routes>
-					<Footer />
-				</ScrollToTop>
+					<Footer></Footer>
 			</BrowserRouter>
 		</div>
 	);
