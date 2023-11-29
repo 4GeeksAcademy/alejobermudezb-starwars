@@ -51,7 +51,7 @@ const handleNextClick = () => {
                 <p className='first-desc'><strong>Population:</strong> {card.population}</p>
                 <p className='second-desc'><strong>Terrain:</strong> {card.terrain}</p>
                 <div className='d-flex justify-content-evenly align-items-end'>
-                <Link to={"/planets/" + card.uid} className="btn btn-outline-light p-2">leer mas</Link>
+                <Link to={"/planets/" + card.uid} className="btn btn-outline-light p-2">Read more</Link>
                 <a className="fs-2 like" onClick={() => handleFavoritoClick(card)}><i className="fa fa-heart"></i></a>
                 </div>
               </div>

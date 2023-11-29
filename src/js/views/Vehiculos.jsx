@@ -57,7 +57,7 @@ useEffect(()=>{
               <p className='first-desc'><strong>Velocity:</strong> {card.max_atmosphering_speed}</p>
               <p className='second-desc'><strong>Tripulation:</strong> {card.passengers}</p>
               <div className='d-flex justify-content-evenly align-items-end'>
-              <Link to={"/vehiculo/" + card.uid} className="btn btn-outline-light p-2">leer mas</Link>
+              <Link to={"/vehiculo/" + card.uid} className="btn btn-outline-light p-2">Read more</Link>
               <a className="fs-2 like" onClick={() => handleFavoritoClick(card)}><i class="fa fa-heart"></i></a>
               </div>
             </div>
